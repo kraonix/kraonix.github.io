@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kraonix | C# & Full Stack Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #0b0f1a;
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 10%;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+        }
+
+        header h1 {
+            color: #00e5ff;
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #aaa;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00e5ff;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 10%;
+            background: radial-gradient(circle at top, #11172a, #05070f);
+        }
+
+        .hero h2 {
+            font-size: 60px;
+            font-weight: 800;
+            background: linear-gradient(90deg, #00e5ff, #8f00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #bbb;
+            max-width: 700px;
+        }
+
+        .buttons {
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 40px;
+            text-decoration: none;
+            margin: 10px;
+            display: inline-block;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, #00e5ff, #8f00ff);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            border: 2px solid #00e5ff;
+            color: #00e5ff;
+        }
+
+        .btn-secondary:hover {
+            background: #00e5ff;
+            color: #000;
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            font-size: 40px;
+            margin-bottom: 30px;
+            color: #00e5ff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #0f1629;
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(0,229,255,0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #777;
+            background: #05070f;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Kraonix</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="https://github.com/kraonix" target="_blank">GitHub</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h2>Hi, I'm Kraonix 👋</h2>
+        <p>
+            I build powerful applications using <strong>C#, .NET, SQL & Web Tech</strong>.  
+            From backend systems to full-stack web apps — I turn ideas into real products.
+        </p>
+
+        <div class="buttons">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="https://github.com/kraonix" class="btn btn-secondary" target="_blank">GitHub</a>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p style="color:#bbb; max-width:800px;">
+        I’m a developer who loves building clean, scalable systems. I specialize in 
+        C#, .NET, databases, and modern web apps. I believe in writing code that’s not 
+        just working — but elegant, maintainable, and powerful.
+    </p>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Book Sharing Platform</h3>
+            <p>A full-stack system for uploading and downloading books with authentication.</p>
+        </div>
+
+        <div class="card">
+            <h3>Employee Management System</h3>
+            <p>CRUD based .NET system with salary, experience & performance tracking.</p>
+        </div>
+
+        <div class="card">
+            <h3>Expense Tracker App</h3>
+            <p>Android app with weekly calendar view & financial insights.</p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Tech Stack</h2>
+
+    <div class="grid">
+        <div class="card">C# / .NET</div>
+        <div class="card">SQL Server</div>
+        <div class="card">HTML / CSS / JavaScript</div>
+        <div class="card">React</div>
+        <div class="card">Firebase</div>
+        <div class="card">Git & GitHub</div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Kraonix | Built with ⚡ and C#
+</footer>
+
+</body>
+</html>
