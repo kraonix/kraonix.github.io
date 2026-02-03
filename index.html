@@ -1,153 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Kraonix | C# & Full Stack Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Sachin | Kraonix Dev</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
+<style>
+:root {
+    --neon: #00ffd5;
+    --pink: #ff77ff;
+    --bg: #05060b;
+    --card: rgba(255,255,255,0.05);
+    --glass: rgba(255,255,255,0.06);
+}
 
-        body {
-            background: #0b0f1a;
-            color: #fff;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", monospace;
+}
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 10%;
-            background: rgba(0,0,0,0.3);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-        }
+body {
+    background: radial-gradient(circle at top, #0b1228, #05060b);
+    color: white;
+    overflow-x: hidden;
+}
 
-        header h1 {
-            color: #00e5ff;
-            font-size: 24px;
-            font-weight: 800;
-        }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    backdrop-filter: blur(20px);
+    background: rgba(0,0,0,0.4);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-        nav a {
-            margin-left: 30px;
-            text-decoration: none;
-            color: #aaa;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--neon), var(--pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        nav a:hover {
-            color: #00e5ff;
-        }
+nav a {
+    margin-left: 30px;
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 50px 10%;
-            background: radial-gradient(circle at top, #11172a, #05070f);
-        }
+nav a:hover {
+    color: var(--neon);
+}
 
-        .hero h2 {
-            font-size: 60px;
-            font-weight: 800;
-            background: linear-gradient(90deg, #00e5ff, #8f00ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 10%;
+}
 
-        .hero p {
-            margin-top: 20px;
-            font-size: 20px;
-            color: #bbb;
-            max-width: 700px;
-        }
+.hero h2 {
+    font-size: 70px;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--neon), var(--pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        .buttons {
-            margin-top: 40px;
-        }
+.hero p {
+    margin-top: 25px;
+    font-size: 22px;
+    color: #ccc;
+    max-width: 750px;
+}
 
-        .btn {
-            padding: 15px 35px;
-            border-radius: 40px;
-            text-decoration: none;
-            margin: 10px;
-            display: inline-block;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+.hero span {
+    color: var(--neon);
+}
 
-        .btn-primary {
-            background: linear-gradient(90deg, #00e5ff, #8f00ff);
-            color: #000;
-        }
+.buttons {
+    margin-top: 40px;
+}
 
-        .btn-primary:hover {
-            transform: scale(1.05);
-        }
+.btn {
+    padding: 16px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
 
-        .btn-secondary {
-            border: 2px solid #00e5ff;
-            color: #00e5ff;
-        }
+.btn-primary {
+    background: linear-gradient(90deg, var(--neon), var(--pink));
+    color: #000;
+}
 
-        .btn-secondary:hover {
-            background: #00e5ff;
-            color: #000;
-        }
+.btn-primary:hover {
+    transform: scale(1.1);
+}
 
-        section {
-            padding: 80px 10%;
-        }
+.btn-outline {
+    border: 2px solid var(--neon);
+    color: var(--neon);
+}
 
-        .section-title {
-            font-size: 40px;
-            margin-bottom: 30px;
-            color: #00e5ff;
-        }
+.btn-outline:hover {
+    background: var(--neon);
+    color: #000;
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
+section {
+    padding: 100px 10%;
+}
 
-        .card {
-            background: #0f1629;
-            padding: 30px;
-            border-radius: 20px;
-            transition: 0.3s;
-        }
+.section-title {
+    font-size: 44px;
+    margin-bottom: 40px;
+    color: var(--neon);
+}
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 20px rgba(0,229,255,0.2);
-        }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #777;
-            background: #05070f;
-        }
-    </style>
+.card {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 40px rgba(0,255,213,0.25);
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+    background: #03040a;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Kraonix</h1>
+    <h1>Sachin.dev</h1>
     <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -158,64 +175,65 @@
 
 <section class="hero">
     <div>
-        <h2>Hi, I'm Kraonix 👋</h2>
+        <h2>Sachin 🚀</h2>
         <p>
-            I build powerful applications using <strong>C#, .NET, SQL & Web Tech</strong>.  
-            From backend systems to full-stack web apps — I turn ideas into real products.
+            Hi, I’m <span>Sachin</span> — aka <span>Kraonix</span>.  
+            I build nerdy, powerful software using <span>C#</span>, <span>.NET</span>, and modern web tech.
+            Clean code. Sharp logic. Built with love 💙
         </p>
 
         <div class="buttons">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="https://github.com/kraonix" class="btn btn-secondary" target="_blank">GitHub</a>
+            <a href="#projects" class="btn btn-primary">Explore My Work</a>
+            <a href="https://github.com/kraonix" class="btn btn-outline" target="_blank">GitHub</a>
         </div>
     </div>
 </section>
 
 <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <p style="color:#bbb; max-width:800px;">
-        I’m a developer who loves building clean, scalable systems. I specialize in 
-        C#, .NET, databases, and modern web apps. I believe in writing code that’s not 
-        just working — but elegant, maintainable, and powerful.
+    <h2 class="section-title">About Sachin</h2>
+    <p style="color:#ccc; max-width:900px;">
+        Sachin is a developer who loves solving problems with elegant code.  
+        From backend systems to full-stack apps, Sachin builds software that feels fast, clean, and powerful.  
+        Debugging at 3AM, coffee in one hand, keyboard in the other — that’s the Sachin grind 😤
     </p>
 </section>
 
 <section id="projects">
-    <h2 class="section-title">Projects</h2>
+    <h2 class="section-title">Sachin’s Projects</h2>
 
     <div class="grid">
         <div class="card">
-            <h3>Book Sharing Platform</h3>
-            <p>A full-stack system for uploading and downloading books with authentication.</p>
+            <h3>📚 Book Sharing Platform</h3>
+            <p>A full-stack app built by Sachin to upload, download, and manage books with auth.</p>
         </div>
 
         <div class="card">
-            <h3>Employee Management System</h3>
-            <p>CRUD based .NET system with salary, experience & performance tracking.</p>
+            <h3>👨‍💼 Employee Management System</h3>
+            <p>Sachin’s .NET project to track employees, salaries, and experience.</p>
         </div>
 
         <div class="card">
-            <h3>Expense Tracker App</h3>
-            <p>Android app with weekly calendar view & financial insights.</p>
+            <h3>📊 Expense Tracker</h3>
+            <p>An Android app built by Sachin with weekly views & smart spending insights.</p>
         </div>
     </div>
 </section>
 
 <section id="skills">
-    <h2 class="section-title">Tech Stack</h2>
+    <h2 class="section-title">Sachin’s Tech Stack</h2>
 
     <div class="grid">
         <div class="card">C# / .NET</div>
         <div class="card">SQL Server</div>
-        <div class="card">HTML / CSS / JavaScript</div>
+        <div class="card">HTML / CSS / JS</div>
         <div class="card">React</div>
         <div class="card">Firebase</div>
-        <div class="card">Git & GitHub</div>
+        <div class="card">GitHub</div>
     </div>
 </section>
 
 <footer>
-    © 2026 Kraonix | Built with ⚡ and C#
+    Built with 💙 by Sachin — Kraonix © 2026
 </footer>
 
 </body>
