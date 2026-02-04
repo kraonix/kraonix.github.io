@@ -1,240 +1,199 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Sachin | Kraonix Dev</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Kraonix — Sachin's developer portfolio" />
+    <title>KRAONIX | Sachin</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2300334E'/%3E%3Cpath d='M18 46V18h6v11l10-11h8L30 31l13 15h-8l-11-13v13h-6Z' fill='%23E8E8E8'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <a class="skip" href="#home">Skip to content</a>
 
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+    <header class="navbar" data-navbar>
+      <div class="nav-inner">
+        <a class="brand" href="#home" aria-label="Kraonix home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">KRAONIX</span>
+        </a>
 
-<style>
-:root {
-    --neon: #00ffd5;
-    --pink: #ff77ff;
-    --bg: #05060b;
-    --card: rgba(255,255,255,0.05);
-    --glass: rgba(255,255,255,0.06);
-}
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-links">
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+          <span class="sr-only">Open menu</span>
+        </button>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "JetBrains Mono", monospace;
-}
+        <nav class="nav-links" id="nav-links" aria-label="Primary">
+          <a class="nav-link is-active" href="#home" data-nav-link>Home</a>
+          <a class="nav-link" href="#projects" data-nav-link>Projects</a>
+          <a class="nav-link" href="#skills" data-nav-link>Skills</a>
+        </nav>
+      </div>
+    </header>
 
-body {
-    background: radial-gradient(circle at top, #0b1228, #05060b);
-    color: white;
-    overflow-x: hidden;
-}
+    <main>
+      <section id="home" class="section hero" aria-label="Hero">
+        <div class="hero-bg" aria-hidden="true"></div>
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 10%;
-    backdrop-filter: blur(20px);
-    background: rgba(0,0,0,0.4);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Kraonix</p>
+            <h1 class="hero-title">
+              <span class="hero-title-line">Hi, I’m Sachin</span>
+              <span class="hero-title-line hero-sub">I build systems, apps, and digital weapons.</span>
+            </h1>
 
-header h1 {
-    font-size: 26px;
-    font-weight: 800;
-    background: linear-gradient(90deg, var(--neon), var(--pink));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+            <div class="hero-actions">
+              <a class="btn" href="#projects" data-scroll>View Projects</a>
+              <a class="btn btn-ghost" href="#skills" data-scroll>Explore Skills</a>
+            </div>
 
-nav a {
-    margin-left: 30px;
-    color: #aaa;
-    text-decoration: none;
-    transition: 0.3s;
-}
+            <div class="social" aria-label="Social links">
+              <a class="icon-link" href="https://www.linkedin.com/in/sachin260708/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M6.5 7.2H3.6V21h2.9V7.2ZM5.05 3C4.03 3 3.2 3.84 3.2 4.86c0 1.02.83 1.85 1.85 1.85 1.02 0 1.86-.83 1.86-1.85C6.96 3.84 6.07 3 5.05 3ZM20.8 21h-2.9v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.74 1.86-2.74 3.78V21h-2.9V7.2h2.78v1.88h.04c.39-.74 1.34-2.03 3.12-2.03 3.34 0 3.96 2.2 3.96 5.06V21Z" fill="currentColor"/>
+                </svg>
+              </a>
 
-nav a:hover {
-    color: var(--neon);
-}
+              <a class="icon-link" href="https://github.com/kraonix" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M12 2.2c-5.43 0-9.83 4.4-9.83 9.83 0 4.34 2.82 8.02 6.73 9.32.49.09.67-.22.67-.48v-1.7c-2.74.6-3.32-1.16-3.32-1.16-.45-1.13-1.09-1.43-1.09-1.43-.9-.62.07-.61.07-.61 1 .07 1.52 1.02 1.52 1.02.88 1.52 2.32 1.08 2.89.83.09-.64.35-1.08.63-1.32-2.19-.25-4.49-1.1-4.49-4.88 0-1.08.39-1.97 1.02-2.66-.1-.25-.45-1.26.1-2.62 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.29 2.75-1.02 2.75-1.02.55 1.36.2 2.37.1 2.62.64.69 1.02 1.58 1.02 2.66 0 3.79-2.3 4.63-4.5 4.87.36.31.67.92.67 1.86v2.76c0 .27.18.58.68.48a9.84 9.84 0 0 0 6.72-9.32c0-5.43-4.4-9.83-9.83-9.83Z" fill="currentColor"/>
+                </svg>
+              </a>
 
-.hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 80px 10%;
-}
+              <a class="icon-link" href="https://instagram.com/sachin_0726_" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+                  <path d="M7.5 2.8h9A4.7 4.7 0 0 1 21.2 7.5v9a4.7 4.7 0 0 1-4.7 4.7h-9a4.7 4.7 0 0 1-4.7-4.7v-9A4.7 4.7 0 0 1 7.5 2.8Zm0 2.1A2.6 2.6 0 0 0 4.9 7.5v9a2.6 2.6 0 0 0 2.6 2.6h9a2.6 2.6 0 0 0 2.6-2.6v-9a2.6 2.6 0 0 0-2.6-2.6h-9Zm10.2 1.6a1 1 0 1 1 0 2 1 1 0 0 1 0-2ZM12 7.4a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2Zm0 2.1a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z" fill="currentColor"/>
+                </svg>
+              </a>
+            </div>
+          </div>
 
-.hero h2 {
-    font-size: 70px;
-    font-weight: 800;
-    background: linear-gradient(90deg, var(--neon), var(--pink));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-    margin-top: 25px;
-    font-size: 22px;
-    color: #ccc;
-    max-width: 750px;
-}
-
-.hero span {
-    color: var(--neon);
-}
-
-.buttons {
-    margin-top: 40px;
-}
-
-.btn {
-    padding: 16px 40px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    margin: 10px;
-    display: inline-block;
-    transition: 0.3s;
-}
-
-.btn-primary {
-    background: linear-gradient(90deg, var(--neon), var(--pink));
-    color: #000;
-}
-
-.btn-primary:hover {
-    transform: scale(1.1);
-}
-
-.btn-outline {
-    border: 2px solid var(--neon);
-    color: var(--neon);
-}
-
-.btn-outline:hover {
-    background: var(--neon);
-    color: #000;
-}
-
-section {
-    padding: 100px 10%;
-}
-
-.section-title {
-    font-size: 44px;
-    margin-bottom: 40px;
-    color: var(--neon);
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background: var(--glass);
-    backdrop-filter: blur(20px);
-    border-radius: 20px;
-    padding: 30px;
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 0 40px rgba(0,255,213,0.25);
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
-    color: #777;
-    background: #03040a;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>Sachin.dev</h1>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="https://github.com/kraonix" target="_blank">GitHub</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <div>
-        <h2>Sachin 🚀</h2>
-        <p>
-            Hi, I’m <span>Sachin</span> — aka <span>Kraonix</span>.  
-            I build nerdy, powerful software using <span>C#</span>, <span>.NET</span>, and modern web tech.
-            Clean code. Sharp logic. Built with love 💙
-        </p>
-
-        <div class="buttons">
-            <a href="#projects" class="btn btn-primary">Explore My Work</a>
-            <a href="https://github.com/kraonix" class="btn btn-outline" target="_blank">GitHub</a>
-        </div>
-    </div>
-</section>
-
-<section id="about">
-    <h2 class="section-title">About Sachin</h2>
-    <p style="color:#ccc; max-width:900px;">
-        Sachin is a developer who loves solving problems with elegant code.  
-        From backend systems to full-stack apps, Sachin builds software that feels fast, clean, and powerful.  
-        Debugging at 3AM, coffee in one hand, keyboard in the other — that’s the Sachin grind 😤
-    </p>
-</section>
-
-<section id="projects">
-    <h2 class="section-title">Sachin’s Projects</h2>
-
-    <div class="grid">
-        <div class="card">
-            <h3>📚 Book Sharing Platform</h3>
-            <p>A full-stack app built by Sachin to upload, download, and manage books with auth.</p>
+          <div class="hero-panel" aria-hidden="true">
+            <div class="panel-card">
+              <div class="panel-line">
+                <span class="chip">STATUS</span>
+                <span class="mono">ONLINE</span>
+              </div>
+              <div class="panel-line">
+                <span class="chip">FOCUS</span>
+                <span class="mono">SYSTEMS • APPS • UX</span>
+              </div>
+              <div class="panel-line">
+                <span class="chip">SIGNAL</span>
+                <span class="mono">KRAONIX</span>
+              </div>
+              <div class="panel-grid">
+                <span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span>
+                <span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span><span class="node"></span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="card">
-            <h3>👨‍💼 Employee Management System</h3>
-            <p>Sachin’s .NET project to track employees, salaries, and experience.</p>
+        <div class="hero-bottom">
+          <a class="scroll-hint" href="#projects" data-scroll aria-label="Scroll to projects">
+            <span class="scroll-hint-line" aria-hidden="true"></span>
+            <span class="scroll-hint-dot" aria-hidden="true"></span>
+          </a>
         </div>
+      </section>
 
-        <div class="card">
-            <h3>📊 Expense Tracker</h3>
-            <p>An Android app built by Sachin with weekly views & smart spending insights.</p>
+      <section id="projects" class="section" aria-label="Projects">
+        <div class="container">
+          <header class="section-head">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-lede">Selected builds with clean architecture and sharp UI instincts.</p>
+          </header>
+
+          <div class="grid projects-grid">
+            <a class="card project-card" href="https://github.com/kraonix?tab=repositories" target="_blank" rel="noreferrer" aria-label="BookBounty repository list">
+              <div class="card-top">
+                <h3 class="card-title">BookBounty</h3>
+                <span class="card-kicker">TypeScript, React</span>
+              </div>
+              <div class="card-bottom">
+                <span class="pill">Explore</span>
+                <span class="arrow" aria-hidden="true">→</span>
+              </div>
+            </a>
+
+            <a class="card project-card" href="https://github.com/kraonix/TrackAll" target="_blank" rel="noreferrer" aria-label="TrackAll repository">
+              <div class="card-top">
+                <h3 class="card-title">TrackAll</h3>
+                <span class="card-kicker">Kotlin, Android Studio</span>
+              </div>
+              <div class="card-bottom">
+                <span class="pill">Explore</span>
+                <span class="arrow" aria-hidden="true">→</span>
+              </div>
+            </a>
+
+            <a class="card project-card" href="https://github.com/kraonix/InkWiz" target="_blank" rel="noreferrer" aria-label="InkWiz repository">
+              <div class="card-top">
+                <h3 class="card-title">InkWiz</h3>
+                <span class="card-kicker">JS, HTML, CSS, AI, API</span>
+              </div>
+              <div class="card-bottom">
+                <span class="pill">Explore</span>
+                <span class="arrow" aria-hidden="true">→</span>
+              </div>
+            </a>
+
+            <a class="card project-card" href="https://github.com/kraonix/FlapFlap" target="_blank" rel="noreferrer" aria-label="FlapFlap repository">
+              <div class="card-top">
+                <h3 class="card-title">FlapFlap</h3>
+                <span class="card-kicker">C#, .NET, Unity Engine</span>
+              </div>
+              <div class="card-bottom">
+                <span class="pill">Explore</span>
+                <span class="arrow" aria-hidden="true">→</span>
+              </div>
+            </a>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-<section id="skills">
-    <h2 class="section-title">Sachin’s Tech Stack</h2>
+      <section id="skills" class="section" aria-label="Skills">
+        <div class="container">
+          <header class="section-head">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-lede">Languages and tools that ship real products.</p>
+          </header>
 
-    <div class="grid">
-        <div class="card">C# / .NET</div>
-        <div class="card">SQL Server</div>
-        <div class="card">HTML / CSS / JS</div>
-        <div class="card">React</div>
-        <div class="card">Firebase</div>
-        <div class="card">GitHub</div>
-    </div>
-</section>
+          <div class="skills-layout">
+            <div class="card skills-card">
+              <h3 class="card-title card-title-sm">Languages</h3>
+              <div class="badges" role="list" aria-label="Languages list">
+                <span class="badge" role="listitem">C++</span>
+                <span class="badge" role="listitem">C#</span>
+                <span class="badge" role="listitem">Java</span>
+                <span class="badge" role="listitem">Kotlin</span>
+                <span class="badge" role="listitem">Python</span>
+              </div>
+            </div>
 
-<footer>
-    Built with 💙 by Sachin — Kraonix © 2026
-</footer>
+            <div class="card skills-card">
+              <h3 class="card-title card-title-sm">Tools</h3>
+              <div class="badges" role="list" aria-label="Tools list">
+                <span class="badge" role="listitem">MySQL</span>
+                <span class="badge" role="listitem">SQL Server</span>
+                <span class="badge" role="listitem">Git</span>
+                <span class="badge" role="listitem">GitHub</span>
+              </div>
+            </div>
+          </div>
 
-</body>
+          <footer class="footer">
+            <div class="footer-inner card">
+              <span class="footer-left">KRAONIX</span>
+              <span class="footer-right">© <span data-year></span> Sachin</span>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
 </html>
